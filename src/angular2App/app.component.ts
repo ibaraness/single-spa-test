@@ -4,7 +4,7 @@ import {Component} from "@angular/core";
     selector: "hellow-app",
     moduleId: module.id.toString(),
     template: `
-        <h2>TEST TEST!</h2>
+    <router-outlet></router-outlet>
     `
     //templateUrl: "./app.component.html",
     //styleUrls: ["./app.component.scss"],
