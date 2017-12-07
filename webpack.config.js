@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const helpers = require('./config/helpers');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
+
 
 module.exports = {
     /**
@@ -87,7 +89,11 @@ module.exports = {
          */
         new HtmlWebpackPlugin({
             template: "root.html",
-            inject: "body"
+            inject: "body",
+        }),
+        new HtmlWebpackIncludeAssetsPlugin({
+            assets: ['./src/angular2App/style.css'],
+            append: true
         })
     ],
     /**

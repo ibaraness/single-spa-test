@@ -21,5 +21,5 @@ function loadAngular2App(){
 
 function isCoolAppActive(){
     return true;
-    //return window.location.hash.startsWith("/");
+    //return window.location.hash.startsWith("#/cool");
 }
