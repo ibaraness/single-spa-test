@@ -29,6 +29,14 @@ export class HelloComponent {
         exampleEvent.next('inner-page');
     }
 
+    public blueBall(){
+        exampleEvent.next('blue-ball');
+    }
+
+    public redSquare(){
+        exampleEvent.next('red-sqaure');
+    }
+
     public getCurrectPage(): string{
         return this.navService.getCurrectPage();
     }

@@ -106,7 +106,7 @@ module.exports = {
          * An addon for HtmlWebpackPlugin that allows us to add styles and Scripts dynamically on the page
          */
         new HtmlWebpackIncludeAssetsPlugin({
-            assets: ['./src/angular2App/style.css'],
+            assets: ['./src/assets/style/style.css'],
             append: true
         })
     ],

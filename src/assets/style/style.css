@@ -1,0 +1,50 @@
+body {
+    margin:0;
+    padding:0;
+    padding-top: 70px;
+}
+.navigation-header {
+    width:100%;
+    height: 70px;
+    border: 1px solid #000000;
+    position: fixed;
+    top:0;
+    left: 0;
+}
+.navigation-header__list {
+    list-style: none;
+}
+.navigation-header__item {
+    float: left;
+    padding: 10px;
+    cursor: pointer;
+}
+.navigation-header__item:hover {
+    color: #4b97ff;
+}
+.reactBox {
+    border:5px solid #605959;
+}
+.blue-ball {
+    width: 100px;
+    height: 100px;
+    margin:20px;
+    border:5px solid #ffffff;
+    background-color:#6699ff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px black;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+}
+.red-sqaure {
+    width: 100px;
+    height: 100px;
+    margin:20px;
+    border:5px solid #ffffff;
+    background-color:#BA0000;
+    box-shadow: 0px 0px 15px black;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+}
