@@ -17,4 +17,8 @@ body {
 .navigation-header__item {
     float: left;
     padding: 10px;
+    cursor: pointer;
+}
+.navigation-header__item:hover {
+    color: #4b97ff;
 }

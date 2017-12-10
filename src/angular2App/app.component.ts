@@ -1,5 +1,6 @@
-import {Component} from "@angular/core";
+import {Component, NgZone, Inject} from "@angular/core";
 import {NavigationService} from "./services/navigation.service";
+import {exampleEvent} from './../common/exampleEvent.js';
 
 @Component({
     selector: "hellow-app",
@@ -12,16 +13,20 @@ import {NavigationService} from "./services/navigation.service";
 })
 export class HelloComponent {
 
-    constructor(private navService: NavigationService){
+    private ngZone: any;
 
+    constructor(private navService: NavigationService, @Inject(NgZone) ngZone:NgZone){
+        this.ngZone = ngZone;
     }
 
     public gotoHome():void{
         this.navService.setCurrentPage('homepage');
+        exampleEvent.next('homepage');
     }
 
     public gotoInnerPage():void{
         this.navService.setCurrentPage('inner-page');
+        exampleEvent.next('inner-page');
     }
 
     public getCurrectPage(): string{

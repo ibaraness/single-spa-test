@@ -1,8 +1,11 @@
 import { Component, OnInit, NgZone, Inject } from "@angular/core";
 
-let exampleEvent: any;
+//let exampleEvent: any;
 
-import './../../common/exampleEvent.js'
+//import './../../common/exampleEvent.js';
+import {exampleEvent} from './../../common/exampleEvent.js';
+
+console.log("sdf", exampleEvent)
 
 @Component({
     selector: 'homepage',
@@ -31,13 +34,6 @@ export class HomepageComponent {
         }else {
             console.log("exampleEvent", exampleEvent)
         }
-        
-		// this.subscription = exampleEvent.subscribe(showFramework => {
-		// 	this.ngZone.run(() => {
-		// 		this.border = showFramework ? getBorder('angular2') : ``;
-		// 		this.showFramework = showFramework;
-		// 	});
-		// });
 	}
 
 }
