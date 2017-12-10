@@ -17,9 +17,9 @@ start();
 
 function loadAngular2App(){
     return import("./src/angular2App/angular2App.js");
-}
+};
 
 function isCoolAppActive(){
     return true;
     //return window.location.hash.startsWith("#/cool");
-}
+};

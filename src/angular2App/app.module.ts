@@ -5,6 +5,7 @@ import {enableProdMode} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from "./homepage/homepage.component";
 import { InnerPageComponent } from "./innerPage/innerPage.component";
+import {NavigationService} from "./services/navigation.service";
 
 //enableProdMode();
 
@@ -31,6 +32,7 @@ const appRouts: Routes = [
             {enableTracing:true}
         ),
     ],
+    providers: [NavigationService],
     bootstrap: [HelloComponent],
     declarations: [HelloComponent, HomepageComponent, InnerPageComponent]
 })

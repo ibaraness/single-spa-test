@@ -15,7 +15,7 @@ module.exports = {
     }, 
     resolve: {
         /**
-         * An array of extensions thast should be discoverable by the module loader
+         * An array of extensions that should be discoverable by the module loader
          */
         extensions: ['.js', '.ts']
     },
@@ -91,6 +91,9 @@ module.exports = {
             template: "root.html",
             inject: "body",
         }),
+        /**
+         * An addon for HtmlWebpackPlugin that allows us to add styles and Scripts dynamically on the page
+         */
         new HtmlWebpackIncludeAssetsPlugin({
             assets: ['./src/angular2App/style.css'],
             append: true
