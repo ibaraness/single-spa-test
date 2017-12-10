@@ -1,25 +1,13 @@
 import {declareChildApplication, start} from 'single-spa';
 
-// Register your application with single-spa. More application will be registerd as you create them.
-// declareChildApplication("cool-app", loadCoolApp, isCoolAppActive);
-
-// function loadCoolApp(){
-//     return import("./cool-app/cool-app.app.js");
-// }
-
-// function isCoolAppActive(){
-//     return window.location.hash.startsWith("#/cool");
-// }
-
-declareChildApplication("cool-app", loadAngular2App, isCoolAppActive);
+declareChildApplication('angular2', ()=> import("./src/angular2App/angular2App.js"), hashPrefix('/app'));
+declareChildApplication('reactjs', ()=> import("./src/reactJSApp/reactJSApp.js"), hashPrefix('/app'));
+declareChildApplication('angularjs', ()=> import("./src/angularJSApp/angularJSApp.js"), hashPrefix('/app'));
 
 start();
 
-function loadAngular2App(){
-    return import("./src/angular2App/angular2App.js");
-};
-
-function isCoolAppActive(){
-    return true;
-    //return window.location.hash.startsWith("#/cool");
-};
+function hashPrefix(prefix) {
+    return function(location) {
+        return location.hash.startsWith(`#${prefix}`);
+    }
+}
