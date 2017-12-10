@@ -29,7 +29,7 @@ const appRouts: Routes = [
         BrowserModule,
         RouterModule.forRoot(
             appRouts,
-            {enableTracing:true}
+            //{enableTracing:true}
         ),
     ],
     providers: [NavigationService],
