@@ -21,10 +21,11 @@ export default class Root extends React.Component {
         }
         return (
             <div className="reactBox">
-                <h2>ReactJS Box</h2>
+            (ReactJS)
             {shape}
                 <h1>Message from other framework: {this.state.message}</h1>
                 This was rendered by app 1, which is written in React.
+                <h2>Modals</h2>
                 <Button button_text="React open Angular2 modal" action="show-ng2-modal" />
                 <Button button_text="React open AngularJS modal" button_color="green" action="show-ng2-modal" />
             </div>
