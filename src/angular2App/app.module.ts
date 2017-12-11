@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from "./homepage/homepage.component";
 import { InnerPageComponent } from "./innerPage/innerPage.component";
 import {NavigationService} from "./services/navigation.service";
+import {ModalComponent} from "./modal/modal.component";
 
 //enableProdMode();
 
@@ -34,6 +35,6 @@ const appRouts: Routes = [
     ],
     providers: [NavigationService],
     bootstrap: [HelloComponent],
-    declarations: [HelloComponent, HomepageComponent, InnerPageComponent]
+    declarations: [HelloComponent, HomepageComponent, InnerPageComponent, ModalComponent]
 })
 export class AppModule {}

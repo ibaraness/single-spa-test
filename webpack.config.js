@@ -84,7 +84,16 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: "html-loader?minimise=true"
-            }
+            },
+            {
+                test: /\.(jpg|png|svg)$/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[path][name].[hash].[ext]",
+                    },
+                },
+            },
         ]
     },
     plugins: [
