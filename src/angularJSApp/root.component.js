@@ -1,6 +1,6 @@
 import angular from 'angular';
 import template from './root.template.html';
-import {showFrameworkObservable, getBorder} from 'common/colored-border.js';
+
 
 angular
     .module('single-spa-app')
@@ -16,14 +16,7 @@ angular
             let subscription;
 
             vm.$onInit = () => {
-                subscription = showFrameworkObservable.subscribe(
-                    frameworkInspector => {
-                    $timeout(() => {
-                    vm.styles = frameworkInspector ? {border: getBorder('angular1')} : {};
-                    vm.frameworkInspector = frameworkInspector;
-                });
-            }
-            );
+
             };
 
             vm.$onDestroy = () => {

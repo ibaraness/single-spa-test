@@ -5,9 +5,9 @@ import './app.module.js';
 const ng1Lifecycles = singleSpaAngular1({
         angular: angular,
         domElementGetter: () => document.getElementById('angularjs'),
-    mainAngularModule: 'single-spa-app',
-    uiRouter: true,
-    preserveGlobal: false,
+        mainAngularModule: 'single-spa-app',
+        uiRouter: true,
+        preserveGlobal: true,
 });
 
 export const bootstrap = [
