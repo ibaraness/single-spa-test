@@ -8,6 +8,7 @@ angular
     enabled: false,
     requireBase: false,
 });
+    $locationProvider.hashPrefix('');
 
 $stateProvider
     .state('root', {
