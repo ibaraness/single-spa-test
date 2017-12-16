@@ -10,6 +10,13 @@ export class GalleryComponent {
 
     private ngZone: any;
 
+    public titles = [
+        "Angular2/4",
+        "AngularJS",
+        "ReactJS",
+        "VueJS"
+    ];
+
     constructor(@Inject(NgZone) ngZone:NgZone){
         this.ngZone = ngZone;
     }

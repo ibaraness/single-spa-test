@@ -1,4 +1,4 @@
-import {Component, NgZone, Inject} from "@angular/core";
+import { Component, NgZone, Inject, Input } from "@angular/core";
 import {exampleEvent} from './../../common/exampleEvent.js';
 
 @Component({
@@ -7,6 +7,8 @@ import {exampleEvent} from './../../common/exampleEvent.js';
     templateUrl: "./gallery-item.component.html",
 })
 export class GalleryItemComponent {
+
+    @Input('title') title: string;
 
     private ngZone: any;
 
