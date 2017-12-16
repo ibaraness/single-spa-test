@@ -24,7 +24,8 @@ module.exports = {
      */
     output: {
         path: path.resolve(__dirname, 'dist'), //output directory
-        filename: "[name].js" // name of generated bundle
+        chunkFilename:"[name].bundle.js",
+        filename: "[name].bundle.js" // name of generated bundle
     },
     module: {
         /**
@@ -46,7 +47,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['babel-preset-env', 'babel-preset-react']
+                        presets: [['babel-preset-env', {"modules":false}], 'babel-preset-react']
                     }
                 }
             },

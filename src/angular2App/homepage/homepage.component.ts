@@ -1,11 +1,17 @@
-import { Component, OnInit, NgZone, Inject } from "@angular/core";
+import { Component, OnInit, NgZone, Inject, AfterViewInit } from "@angular/core";
+import {declareChildApplication} from 'single-spa';
 
 //let exampleEvent: any;
 
 //import './../../common/exampleEvent.js';
 import {exampleEvent} from './../../common/exampleEvent.js';
 
-console.log("sdf", exampleEvent)
+function hashPrefix(prefix) {
+    return function(location) {
+        //console.log(location)
+        return location.hash.startsWith(`#${prefix}`);
+    }
+}
 
 @Component({
     selector: 'homepage',
@@ -13,7 +19,8 @@ console.log("sdf", exampleEvent)
     styleUrls: ['./homepage.component.scss']
 })
 
-export class HomepageComponent {
+export class HomepageComponent implements AfterViewInit{
+    
     private showFramework: any;
     private ngZone: any;
     private subscription: any;
@@ -34,6 +41,11 @@ export class HomepageComponent {
         }else {
             console.log("exampleEvent", exampleEvent)
         }
-	}
+    }
+    
+    ngAfterViewInit(): void {
+        //Load react here
+        declareChildApplication('reactjs', ()=> import("./../../reactJSApp/reactJSApp.js"), hashPrefix('/'));
+    }
 
 }
